@@ -19,14 +19,6 @@ mason_lspconfig.setup({
     autoinstall = true
 })
 
-lspconfig.clangd.setup{}
-lspconfig.rust_analyzer.setup{}
-lspconfig.cmake.setup{}
-lspconfig.autotools_ls.setup{}
-lspconfig.pyright.setup{}
-lspconfig.lua_ls.setup{}
-lspconfig.verible.setup{
-    single_file_support = true,
-    settings = {'--rules=-module-parameter,+line-length:80'}
-}
-lspconfig.texlab.setup{}
+for _, server in pairs(servers) do
+    lspconfig[server].setup{}
+end
