@@ -1,0 +1,6 @@
+configuration {
+    drun-display-format: "{icon} {name}";
+    show-icons: true;
+}
+
+@theme "/usr/share/rofi/themes/Arc-Dark.rasi"
