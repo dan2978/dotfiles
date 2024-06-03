@@ -7,8 +7,8 @@ sxhkd &
 
 # Config
 
-bspc monitor HDMI-1 -d			1 2 3 4 5
-#bspc monitor DP-1 -d			6 7 8 9 0
+bspc monitor HDMI-0 -d			1 2 3 4 5
+#bspc monitor DP-0 -d			6 7 8 9 0
 
 #bspc config active_border_color	"#282A2E"
 #bspc config focused_border_color	"#C5C8C6"
