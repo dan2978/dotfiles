@@ -1,9 +1,11 @@
 #!/bin/bash
 
 # Monitors layout
-#$HOME/.config/xrandr/launch.sh &
+$HOME/.config/xrandr/launch.sh &
 
 sxhkd &
+
+$HOME/.config/xsecurelock/launch.sh &
 
 # Config
 

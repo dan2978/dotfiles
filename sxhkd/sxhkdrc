@@ -7,15 +7,21 @@ super + q
 	kitty
 
 # program launcher
-super + r
-	rofi -show drun
-
-super + w
-    rofi -show window
+super + {r,w}
+	rofi -show {drun,window}
 
 # make sxhkd reload its configuration files:
 super + Escape
 	pkill -USR1 -x sxhkd
+
+# lock screen
+super + alt + l
+    xsecurelock
+
+# gaming/working freshrates
+super + alt + {g,w}
+    xrandr --output HDMI-0 --primary --mode 1920x1080 --rate {75,60}
+#   xrandr --output DP-0 --right-of HDMI-0 --mode 1280x1024 --rate {75,60}
 
 #
 # bspwm hotkeys
