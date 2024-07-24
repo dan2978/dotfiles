@@ -3,10 +3,9 @@ XTerm.vt100.faceName: SauceCodePro Nerd Font Mono:size=11:antialias=true
 ! Colors
 XTerm.vt100.background: black
 XTerm.vt100.foreground: white
-! Ctrl + Shift + {C,V}: {copy/paste}
-XTerm.vt100.translations: #override \n\
-	Ctrl Shift <Key>C: copy-selection(CLIPBOARD) \n\
-	Ctrl Shift <Key>V: insert-selection(CLIPBOARD)
+XTerm.vt100.selectToClipboard: true
+! Scroll
+XTerm.vt100.saveLines: 65536
 ! Full color support
 XTerm.termName: xterm-256color
 ! Right backspace code

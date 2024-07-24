@@ -10,7 +10,13 @@ local servers = {
     'pyright',          -- Python
     'lua_ls',           -- LUA
     'verible',          -- Verilog, SystemVerilog
-    'texlab',           -- TeX, LaTeX, BibTeX
+    'texlab'            -- TeX, LaTeX, BibTeX
+}
+
+local settings = {
+    ['lua_ls'] = {
+        Lua = { diagnostics = { enable = true, globals = { 'vim' } } }
+    }
 }
 
 mason.setup()
@@ -19,6 +25,13 @@ mason_lspconfig.setup({
     autoinstall = true
 })
 
+vim.api.nvim_create_autocmd('VimEnter', {
+    group = 'autoupdate',
+    callback = function ()
+        require'mason-registry'.update()
+    end
+})
+
 for _, server in pairs(servers) do
-    lspconfig[server].setup{}
+    lspconfig[server].setup{ settings = settings[server] }
 end

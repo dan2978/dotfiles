@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + q
-	kitty
+	xterm
 
 # program launcher
 super + {r,w}
